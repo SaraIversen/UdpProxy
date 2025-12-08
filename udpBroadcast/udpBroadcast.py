@@ -71,7 +71,7 @@ while True:
         "time": now.strftime("%H:%M:%S"), # "14:35:20" 
         "decibel": db,
         "humidityPercent": humidity,
-        "celcius": temperature,   
+        "celsius": temperature,   
         "lumen": light,
     }
 
