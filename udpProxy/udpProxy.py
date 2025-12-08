@@ -7,7 +7,7 @@ PORT = 17000
 endpoints = {
     "decibel": "https://localhost:7080/api/NoiseDB",
     "humidityPercent": "https://localhost:7080/api/HumidityDB",
-    "celcius": "https://localhost:7080/api/TemperatureDB",
+    "celsius": "https://localhost:7080/api/TemperatureDB",
     "lumen": "https://localhost:7080/api/LightDB"
 }
 
@@ -34,7 +34,7 @@ while True:
             "time": message_dictionary["time"],
         }
         print(f'url: {url} message: {payload}') # For testing purposes when the using the dummy measuments...
-        #response = requests.post(url, json=payload, verify=False)
+        response = requests.post(url, json=payload, verify=False)
         # json=... automatically serializes the dictionary to JSON
         # json=... automatically sets the Content-Type header to application/json
-        #print(f'Response from REST API: {response.status_code} - {response.text}')
+        print(f'Response from REST API: {response.status_code} - {response.text}')
